@@ -1,0 +1,103 @@
+﻿:root {
+  --bg: #ffe3f1;
+  --panel: #fff5fc;
+  --line: #8a3d6b;
+  --text: #5c2344;
+  --accent: #ff4fa3;
+  --soft: #f5c9e2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Candara", "Trebuchet MS", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 12% 12%, #ffd7ee, transparent 40%),
+    radial-gradient(circle at 85% 16%, #ffc3e5, transparent 42%),
+    radial-gradient(circle at 80% 86%, #ffd9ef, transparent 35%),
+    linear-gradient(145deg, #ffe7f3, #ffd7eb 40%, #ffdff0);
+  color: var(--text);
+}
+
+.wrap {
+  width: min(960px, 95vw);
+}
+
+h1 {
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.04em;
+  color: #7d255b;
+  text-shadow: 0 2px 0 #ffeaf5;
+}
+
+.hint {
+  margin: 0 0 1rem;
+  color: #7f4060;
+}
+
+kbd {
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: 6px;
+  padding: 2px 6px;
+  background: #fff;
+  font-size: 0.9rem;
+}
+
+.game-shell {
+  position: relative;
+  border: 3px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--panel);
+  box-shadow: 0 14px 30px rgba(138, 61, 107, 0.24);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  background: rgba(255, 245, 252, 0.72);
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.overlay.visible {
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  .hint {
+    font-size: 0.95rem;
+  }
+
+  .overlay {
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+}

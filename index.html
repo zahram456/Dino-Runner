@@ -1,0 +1,24 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dino Runner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>Dino Runner</h1>
+    <p class="hint">Press <kbd>Space</kbd>/<kbd>Arrow Up</kbd> to jump, <kbd>P</kbd> to pause</p>
+
+    <section class="game-shell">
+      <canvas id="game" width="900" height="260" aria-label="Dino runner game"></canvas>
+      <div id="overlay" class="overlay visible">
+        <p id="overlay-text">Press Space to Start</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
